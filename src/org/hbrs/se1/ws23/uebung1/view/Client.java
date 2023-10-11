@@ -11,7 +11,7 @@ public class Client {
 		 * (auch bezeichnet als CLI, Terminal)
 		 *
 		 */
-		 void display( int aNumber ){
+		 void display(int aNumber){
 			// In dieser Methode soll die Methode translateNumber
 			// mit dem übergegebenen Wert der Variable aNumber
 			// aufgerufen werden.
