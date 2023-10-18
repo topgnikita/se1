@@ -22,10 +22,8 @@ class GermanTranslatorTest {
     }
     @Test
     void aNegativeTest() {
-        //Äquivalenzklasse 0
+        //Äquivalenzklasse x < 0
         assertThrows(IndexOutOfBoundsException.class, () -> {translator.translateNumber(0);});
-
-        //Äquivalenzklasse 1 > x
         assertThrows(IndexOutOfBoundsException.class, () -> {translator.translateNumber(-1);});
         assertThrows(IndexOutOfBoundsException.class, () -> {translator.translateNumber(-300);});
 
