@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="161f8ea2-5b9d-4dc8-a9e7-efb64d6f83a4" name="Changes" comment="vor uebung 2">
-      <change afterPath="$PROJECT_DIR$/src/org/hbrs/se1/ws23/uebung2/ConcreteMember.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/hbrs/se1/ws23/uebung2/Container.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/hbrs/se1/ws23/uebung2/exception/ContainerException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/org/hbrs/se1/ws23/uebung2/test/ContainerTest.java" afterDir="false" />
+    <list default="true" id="161f8ea2-5b9d-4dc8-a9e7-efb64d6f83a4" name="Changes" comment="nach uebung 2 zuhause">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/hbrs/se1/ws23/uebung2/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/hbrs/se1/ws23/uebung2/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/hbrs/se1/ws23/uebung2/Container.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/hbrs/se1/ws23/uebung2/Container.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +122,7 @@
       <workItem from="1697549099463" duration="1725000" />
       <workItem from="1697628614423" duration="241000" />
       <workItem from="1697628890129" duration="7592000" />
-      <workItem from="1697975915947" duration="12641000" />
+      <workItem from="1697975915947" duration="13024000" />
     </task>
     <task id="LOCAL-00001" summary="Stand nach übung1 in hbrs">
       <created>1697036852747</created>
@@ -190,7 +186,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697639613472</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="nach uebung 2 zuhause">
+      <option name="closed" value="true" />
+      <created>1698131866377</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1698131866377</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,6 +218,7 @@
     <MESSAGE value="Übung 1 Abgabe" />
     <MESSAGE value="Übung 1 Vorstellung" />
     <MESSAGE value="vor uebung 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="vor uebung 2" />
+    <MESSAGE value="nach uebung 2 zuhause" />
+    <option name="LAST_COMMIT_MESSAGE" value="nach uebung 2 zuhause" />
   </component>
 </project>
