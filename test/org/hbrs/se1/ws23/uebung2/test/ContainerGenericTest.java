@@ -1,14 +1,17 @@
 package org.hbrs.se1.ws23.uebung2.test;
 
-import org.hbrs.se1.ws23.uebung2.*;
+import org.hbrs.se1.ws23.uebung2.ConcreteMember;
+import org.hbrs.se1.ws23.uebung2.Container;
+import org.hbrs.se1.ws23.uebung2.Member;
+import org.hbrs.se1.ws23.uebung3.*;
 import org.hbrs.se1.ws23.uebung2.exception.*;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class ContainerTest {
-
-    Container container = new Container();
+public class ContainerGenericTest {
+    ContainerGeneric<Member> container = ContainerGeneric.getInstance();;
     Member m1 = new ConcreteMember(7);
     Member m2 = new ConcreteMember(11);
 
@@ -43,7 +46,7 @@ public class ContainerTest {
 
 
 
-        container.dump();
+        //container.dump();
         assertEquals(2,container.size());
         container.size();
         assertEquals(2,container.size());
@@ -61,4 +64,5 @@ public class ContainerTest {
                     e.getMessage() );
         }
     }
+
 }

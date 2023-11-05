@@ -1,5 +1,6 @@
 package org.hbrs.se1.ws23.uebung3.persistence;
 
+import java.io.*;
 import java.util.List;
 
 public class PersistenceStrategyStream<E> implements PersistenceStrategy<E> {
@@ -20,7 +21,15 @@ public class PersistenceStrategyStream<E> implements PersistenceStrategy<E> {
      * and save.
      */
     public void openConnection() throws PersistenceException {
+        /*try {
+            FileOutputStream fos = new FileOutputStream(location);
+            oos = new ObjectOutputStream(fos);
 
+            FileInputStream fis = new FileInputStream(location);
+            ois = new ObjectInputStream(fis);
+        } catch (IOException e) {
+            throw new PersistenceException("Öffnen der Verbindung nicht möglich: " + e.getMessage());
+        }*/
     }
 
     @Override
@@ -28,14 +37,32 @@ public class PersistenceStrategyStream<E> implements PersistenceStrategy<E> {
      * Method for closing the connections to a stream
      */
     public void closeConnection() throws PersistenceException {
-
+        /*try {
+            oos.close();
+            ois.close();
+        } catch (IOException e) {
+            throw new PersistenceException("Fehler beim schließen der Verbindung: " + e.getMessage());
+        }*/
     }
 
     @Override
     /**
      * Method for saving a list of Member-objects to a disk (HDD)
      */
-    public void save(List<E> member) throws PersistenceException  {
+    public void save(List<E> member) throws PersistenceException, IOException {
+
+        ObjectOutputStream oos = null;
+        FileOutputStream fos = null;
+
+        try {
+            fos = new FileOutputStream(location);
+            oos = new ObjectOutputStream(fos);
+            oos.writeObject(member);
+            oos.close();
+
+        } catch (IOException e) {
+            throw new PersistenceException(PersistenceException.ExceptionType.ConnectionNotAvailable,"Fehler beim schreiben");
+        }
 
     }
 
@@ -45,11 +72,11 @@ public class PersistenceStrategyStream<E> implements PersistenceStrategy<E> {
      * Some coding examples come for free :-)
      * Take also a look at the import statements above ;-!
      */
-    public List<E> load() throws PersistenceException  {
-        // Some Coding hints ;-)
+    public List<E> load() throws PersistenceException {
+        /*Some Coding hints ;-)
 
-        // ObjectInputStream ois = null;
-        // FileInputStream fis = null;
+         ObjectInputStream ois = null;
+         FileInputStream fis = null;
         // List<...> newListe =  null;
         //
         // Initiating the Stream (can also be moved to method openConnection()... ;-)
@@ -65,7 +92,22 @@ public class PersistenceStrategyStream<E> implements PersistenceStrategy<E> {
         //       newListe = (List) obj;
         // return newListe
 
-        // and finally close the streams (guess where this could be...?)
+        and finally close the streams (guess where this could be...?)*/
+        FileInputStream fis = null;
+        List<E> newListe =  null;
+        ObjectInputStream ois = null;
+        try {
+            fis = new FileInputStream(location);
+            ois = new ObjectInputStream(fis);
+            Object o = ois.readObject();
+            if (o instanceof List<?>) {
+                newListe = (List) o;
+                ois.close();
+                return newListe;
+            }
+        } catch (IOException | ClassNotFoundException e) {
+            throw new PersistenceException(PersistenceException.ExceptionType.ConnectionNotAvailable, "Fehler beim Laden: " + e.getMessage());
+        }
         return null;
     }
 }
