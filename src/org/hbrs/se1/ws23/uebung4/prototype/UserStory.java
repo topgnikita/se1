@@ -1,5 +1,6 @@
 package org.hbrs.se1.ws23.uebung4.prototype;
     public class UserStory {
+        // ToDo: Sind die Attribute der Klasse UserStory vollständig? (F4)
 
         String titel;
         int aufwand = 0;
@@ -8,6 +9,7 @@ package org.hbrs.se1.ws23.uebung4.prototype;
         int risk = 0;
         int strafe = 0;
         double prio = 0.0;
+        String project;
 
         public String getProject() {
             return project;
@@ -17,7 +19,7 @@ package org.hbrs.se1.ws23.uebung4.prototype;
             this.project = project;
         }
 
-        String project;
+
 
 
         public UserStory(int id, String titel, int mehrwert, int strafe,

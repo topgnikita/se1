@@ -13,17 +13,21 @@ import java.util.stream.Collectors;
  * Strategie für die Wiederverwendung (Reuse):
  * - Anlegen der Klasse UserStory
  * - Anpassen des Generic in der List-Klasse (ALT: Member, NEU: UserStory)
- * - Anpassen des Generic in der List-Klasse (ALT: Member, NEU: UserStory)
  * - Anpassen der Methodennamen
  *
- * (Was ist ihre Strategie zur Wiederverwendung?)
+ * ToDo: Was ist ihre Strategie zur Wiederverwendung? (F1)
  *
  * Alternative 1:
  * Klasse UserStory implementiert Interface Member (UserStory implements Member)
  * Vorteil: Wiederverwendung von Member, ID verwenden; Strenge Implementierung gegen Interface
  * Nachteil: Viele Casts notwendig, um auf die anderen Methoden zuzugreifen
+ *
  * Alternative 2:
  * Container mit Generic entwickeln (z.B. Container<E>))
+ *
+ * Entwurfsentscheidung: Die wichtigsten Zuständigkeiten (responsibilities) sind in einer Klasse, d.h. Container,
+ * diese liegt in einem Package.
+ * ToDo: Wie bewerten Sie diese Entscheidung? (F2, F6)
  * 
  */
 
@@ -35,9 +39,9 @@ public class Container {
 	// Statische Klassen-Variable, um die Referenz
 	// auf das einzige Container-Objekt abzuspeichern
 	// Diese Variante sei thread-safe, so hat Hr. P. es gehört... stimmt das?
-	// Todo: Bewertung Thread-Safeness
-	// Nachteil: ggf. geringer Speicherbedarf, da Singleton zu Programmstart schon erzeugt
-	// Todo: Bewertung Speicherbedarf
+	// Todo: Bewertung Thread-Safeness (F1)
+	// Nachteil: ggf. geringer Speicherbedarf, da Singleton zu Programmstart schon erzeugt wird
+	// Todo: Bewertung Speicherbedarf (F1)
 	private static Container instance = new Container();
 	
 	// URL der Datei, in der die Objekte gespeichert werden 
@@ -64,7 +68,7 @@ public class Container {
 	 * (hier koennen ggf. weitere Initialisierungsarbeiten gemacht werden spaeter)
 	 */
 	public static void main (String[] args) throws Exception {
-		// ToDo: Bewertung Exception-Handling
+		// ToDo: Bewertung Exception-Handling (F3, F7)
 		Container con = Container.getInstance();
 		con.startEingabe(); 
 	}
@@ -75,10 +79,10 @@ public class Container {
 	 * Das entlastet den Entwickler zur Entwicklungszeit und den Endanwender zur Laufzeit
 	 */
 	public void startEingabe() throws ContainerException, Exception {
-	
 		String strInput = null;
 		
 		// Initialisierung des Eingabe-View
+		// ToDo: Funktionsweise des Scanners erklären (F3)
 		Scanner scanner = new Scanner( System.in );
 
 		while ( true ) {
@@ -125,7 +129,7 @@ public class Container {
 		// ausgeben. Allerdings weiss der Student hier nicht weiter
 
 		// [Sortierung ausgelassen]
-		// Todo: Implementierung Sortierung
+		// Todo: Implementierung Sortierung (F4)
 
 		// Klassische Ausgabe ueber eine For-Each-Schleife
 		for (UserStory story : liste) {
@@ -135,7 +139,7 @@ public class Container {
 		// [Variante mit forEach-Methode / Streams (--> Kapitel 9, Lösung Übung Nr. 2)?
 		//  Gerne auch mit Beachtung der neuen US1
 		// (Filterung Projekt = "ein Wert (z.B. Coll@HBRS)" und Risiko >=5
-		// Todo: Implementierung Filterung mit Lambda
+		// Todo: Implementierung Filterung mit Lambda (F5)
 
 	}
 
