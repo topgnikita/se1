@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="161f8ea2-5b9d-4dc8-a9e7-efb64d6f83a4" name="Changes" comment="nach uebung 4 zuhause">
-      <change afterPath="$PROJECT_DIR$/allStories.ser" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/objects.ser" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/hbrs/se1/ws23/uebung4/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/hbrs/se1/ws23/uebung4/controller/InputDialog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/hbrs/se1/ws23/uebung4/model/ContainerGeneric.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/hbrs/se1/ws23/uebung4/model/UserStory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/hbrs/se1/ws23/uebung4/view/UserStoryView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/hbrs/se1/ws23/solutions/uebung3/persistence/PersistenceStrategyStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/hbrs/se1/ws23/solutions/uebung3/persistence/PersistenceStrategyStream.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/hbrs/se1/ws23/uebung3/ContainerGeneric.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/hbrs/se1/ws23/uebung3/ContainerGeneric.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/hbrs/se1/ws23/uebung4/prototype/Container.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/hbrs/se1/ws23/uebung4/prototype/Container.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/hbrs/se1/ws23/uebung4/prototype/UserStory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/hbrs/se1/ws23/uebung4/prototype/UserStory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/org/hbrs/se1/ws23/uebung3/test/ContainerGenericTestNew.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/org/hbrs/se1/ws23/uebung3/test/ContainerGenericTestNew.java" afterDir="false" />
-    </list>
+    <list default="true" id="161f8ea2-5b9d-4dc8-a9e7-efb64d6f83a4" name="Changes" comment="nach uebung 4 zuhause" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,12 +23,12 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="meinRepo/main" />
+    <option name="BRANCH" value="MeinRepo/main" />
   </component>
   <component name="Git.Pull.Settings">
     <option name="OPTIONS">
       <set>
-        <option value="REBASE" />
+        <option value="NO_COMMIT" />
       </set>
     </option>
   </component>
@@ -53,6 +39,7 @@
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -183,7 +170,8 @@
       <workItem from="1700051720364" duration="16377000" />
       <workItem from="1700404258442" duration="6298000" />
       <workItem from="1700558753166" duration="1710000" />
-      <workItem from="1700560722886" duration="320000" />
+      <workItem from="1700560722886" duration="534000" />
+      <workItem from="1700584054175" duration="765000" />
     </task>
     <task id="LOCAL-00001" summary="Stand nach übung1 in hbrs">
       <created>1697036852747</created>
@@ -271,7 +259,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699204981528</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="nach uebung 4 zuhause">
+      <option name="closed" value="true" />
+      <created>1700561064236</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1700561064236</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
