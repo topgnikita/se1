@@ -6,7 +6,7 @@ import java.util.List;
 public class PersistenceStrategyStream<E> implements PersistenceStrategy<E> {
 
     // URL der Datei, in der die Objekte gespeichert werden
-    private String LOCATION = "objects.ser";
+    private String LOCATION ;
 
     private ObjectOutputStream oos = null;
     private FileOutputStream fos = null;

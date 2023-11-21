@@ -17,6 +17,9 @@ import java.util.stream.Collectors;
  *
  * ToDo: Was ist ihre Strategie zur Wiederverwendung? (F1)
  *
+ * 		Meine Lösung: 	Eventuell Generisch machen, dass auch andere Objeke gespeichert werden
+ * 						können.
+ *
  * Alternative 1:
  * Klasse UserStory implementiert Interface Member (UserStory implements Member)
  * Vorteil: Wiederverwendung von Member, ID verwenden; Strenge Implementierung gegen Interface
@@ -28,7 +31,10 @@ import java.util.stream.Collectors;
  * Entwurfsentscheidung: Die wichtigsten Zuständigkeiten (responsibilities) sind in einer Klasse, d.h. Container,
  * diese liegt in einem Package.
  * ToDo: Wie bewerten Sie diese Entscheidung? (F2, F6)
- * 
+ *
+ * 	Terminal Programm in eigene Klasse, übersichtlichkeit nicht gegeben.
+ * 	Ausgabe und Eingabe nicht in Container schreiben
+ *
  */
 
 public class Container {
@@ -40,9 +46,17 @@ public class Container {
 	// auf das einzige Container-Objekt abzuspeichern
 	// Diese Variante sei thread-safe, so hat Hr. P. es gehört... stimmt das?
 	// Todo: Bewertung Thread-Safeness (F1)
+	//
+	//			Nicht Thread Safe da Konstruktor nicht private ist
+	//
 	// Nachteil: ggf. geringer Speicherbedarf, da Singleton zu Programmstart schon erzeugt wird
 	// Todo: Bewertung Speicherbedarf (F1)
-	private static Container instance = new Container();
+	//
+	//
+	private static Container instance = new Container();		//----- kann man auch null setzen
+																//----- ist aber als Singleton nicht faslch
+																//----- ist auch thread safe
+																//----- Nachteil hoher Speicherbedarf
 	
 	// URL der Datei, in der die Objekte gespeichert werden 
 	final static String LOCATION = "allStories.ser";
@@ -51,7 +65,7 @@ public class Container {
 	 * Liefert ein Singleton zurück.
 	 * @return
 	 */
-	public static Container getInstance() {
+	public static Container getInstance() {   //------synchronized für thread safeness, hier kann auch instanziert werden
 		return instance;
 	}
 	
@@ -59,7 +73,7 @@ public class Container {
 	 * Vorschriftsmäßiges Ueberschreiben des Konstruktors (private) gemaess Singleton-Pattern (oder?)
 	 * Nun auf private gesetzt! Vorher ohne Access Qualifier (--> dann package-private)
 	 */
-	Container(){
+	Container() {					//-------Konstruktor muss private gesetzt werden für Singleton
 		liste = new ArrayList<UserStory>();
 	}
 	
@@ -69,6 +83,7 @@ public class Container {
 	 */
 	public static void main (String[] args) throws Exception {
 		// ToDo: Bewertung Exception-Handling (F3, F7)
+		//-----lieber TryCatch benutzen
 		Container con = Container.getInstance();
 		con.startEingabe(); 
 	}
@@ -83,6 +98,9 @@ public class Container {
 		
 		// Initialisierung des Eingabe-View
 		// ToDo: Funktionsweise des Scanners erklären (F3)
+		/*
+		 *
+		 */
 		Scanner scanner = new Scanner( System.in );
 
 		while ( true ) {
@@ -115,6 +133,7 @@ public class Container {
 				UserStory userStory = new UserStory();
 				userStory.setId(22);
 				this.addUserStory( userStory );
+				//try catch block muss am besten gebaut werden da store exception nicht beanhandelt wird
 				this.store();
 			}
 		} // Ende der Schleife
@@ -130,7 +149,7 @@ public class Container {
 
 		// [Sortierung ausgelassen]
 		// Todo: Implementierung Sortierung (F4)
-
+		//Collections.sort(this.liste);
 		// Klassische Ausgabe ueber eine For-Each-Schleife
 		for (UserStory story : liste) {
 			System.out.println(story.toString());

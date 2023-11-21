@@ -1,13 +1,8 @@
 package org.hbrs.se1.ws23.uebung3.test;
 
-import org.hbrs.se1.ws23.uebung2.ConcreteMember;
-import org.hbrs.se1.ws23.uebung2.Member;
-import org.hbrs.se1.ws23.uebung2.exception.ContainerException;
-import org.hbrs.se1.ws23.uebung3.ContainerGeneric;
-import org.hbrs.se1.ws23.uebung3.MemberView;
-import org.hbrs.se1.ws23.uebung3.persistence.PersistenceException;
-import org.hbrs.se1.ws23.uebung3.persistence.PersistenceStrategyMongoDB;
-import org.hbrs.se1.ws23.uebung3.persistence.PersistenceStrategyStream;
+import org.hbrs.se1.ws23.uebung2.*;
+import org.hbrs.se1.ws23.uebung3.*;
+import org.hbrs.se1.ws23.uebung3.persistence.*;
 import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -71,8 +66,6 @@ public class ContainerGenericTestNew {
         container.setPersistenceStrategy(stream);
 
         Member m1 = new ConcreteMember(7);
-
-        MemberView mv = new MemberView();
 
         assertEquals(0, container.size());
         try {

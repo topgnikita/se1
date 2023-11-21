@@ -1,5 +1,5 @@
 package org.hbrs.se1.ws23.uebung4.prototype;
-    public class UserStory {
+    public class UserStory implements java.io.Serializable {            //Objekte Stream wichtig serializable
         // ToDo: Sind die Attribute der Klasse UserStory vollständig? (F4)
 
         String titel;
@@ -81,5 +81,11 @@ package org.hbrs.se1.ws23.uebung4.prototype;
             this.strafe = strafe;
         }
 
-     }
+        /*@Override
+        public int compareTo(UserStory o) {
+            if(o.prio < this.prio) {
+
+            };
+        }*/
+    }
 

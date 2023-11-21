@@ -1,17 +1,16 @@
-package org.hbrs.se1.ws23.uebung3;
+package org.hbrs.se1.ws23.uebung4.model;
 
-import org.hbrs.se1.ws23.uebung2.Member;
 import org.hbrs.se1.ws23.uebung2.exception.ContainerException;
-import org.hbrs.se1.ws23.uebung3.persistence.*;
-
+import org.hbrs.se1.ws23.uebung3.persistence.PersistenceException;
+import org.hbrs.se1.ws23.uebung3.persistence.PersistenceStrategy;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 import static org.hbrs.se1.ws23.uebung3.persistence.PersistenceException.ExceptionType.NoStrategyIsSet;
 
-public class ContainerGeneric <T extends Member>  {
-    private static ContainerGeneric<Member> instance = null;      //Instance Variable für Singleton Pattern
+public class ContainerGeneric<T extends UserStory> {
+    private static ContainerGeneric<UserStory> instance = null;      //Instance Variable für Singleton Pattern
     private List<T> liste;
     private PersistenceStrategy<T> persistenceStrategy;
 
@@ -19,33 +18,33 @@ public class ContainerGeneric <T extends Member>  {
         liste = new ArrayList<>();
     }
     /**
-    *Thread-Safe?  →   über synchronized
+     *Thread-Safe?  →   über synchronized
      * Nachteil: höhere Laufzeit
-    */
-    public static synchronized ContainerGeneric<Member> getInstance() {   //Statische Methode für das Singleton Pattern
+     */
+    public static synchronized ContainerGeneric getInstance() {   //Statische Methode für das Singleton Pattern
         if (instance == null) {                                         //Es wird beim Aufruf der Methode immer nur eine Instance verwendet
-            instance = new ContainerGeneric<>();
+            instance = new ContainerGeneric();
         }
         return instance;
     }
 
-    public void addMember(T member) throws ContainerException {
+    public void addUS(T us) throws ContainerException {
         for(T m : liste) {
-            if(m.getID().equals(member.getID())) {
-                throw new ContainerException("Das Member-Objekt mit der ID " + member.getID() + " ist bereits vorhanden!");
+            if(m.getID() == us.getID()){
+                throw new ContainerException("Das UserStory-Objekt mit der ID " + us.getID() + " ist bereits vorhanden!");
             }
         }
-        liste.add(member);
+        liste.add(us);
     }
 
-    public String deleteMember(Integer id) {
+    public String deleteUS(Integer id) {
         for(T m : liste) {
-            if(m.getID().equals(id)) {
+            if(m.getID() == id) {
                 liste.remove(m);
-                return "Member mit ID " + id + " geloescht!";
+                return "UserStory mit ID " + id + " geloescht!";
             }
         }
-        return "Member mit ID " + id + " ist nicht im Container vorhanden und kann deshalb nicht geloescht werden!";
+        return "UserStory mit ID " + id + " ist nicht im Container vorhanden und kann deshalb nicht geloescht werden!";
     }
 
     /*

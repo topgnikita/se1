@@ -4,22 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="161f8ea2-5b9d-4dc8-a9e7-efb64d6f83a4" name="Changes" comment="nach uebung 2 zuhause">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="161f8ea2-5b9d-4dc8-a9e7-efb64d6f83a4" name="Changes" comment="nach uebung 4 zuhause">
+      <change afterPath="$PROJECT_DIR$/allStories.ser" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/objects.ser" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/hbrs/se1/ws23/uebung3/ContainerGeneric.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/hbrs/se1/ws23/uebung3/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/hbrs/se1/ws23/uebung3/MemberView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/hbrs/se1/ws23/uebung3/view/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/org/hbrs/se1/ws23/uebung2/test/ContainerGenericTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/org/hbrs/se1/ws23/uebung3/test/ContainerGenericTestNew.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/hbrs/se1/ws23/uebung4/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/hbrs/se1/ws23/uebung4/controller/InputDialog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/hbrs/se1/ws23/uebung4/model/ContainerGeneric.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/hbrs/se1/ws23/uebung4/model/UserStory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/org/hbrs/se1/ws23/uebung4/view/UserStoryView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/hbrs/se1/ws23/uebung2/ConcreteMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/hbrs/se1/ws23/uebung2/ConcreteMember.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/hbrs/se1/ws23/uebung2/exception/ContainerException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/hbrs/se1/ws23/uebung2/exception/ContainerException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/hbrs/se1/ws23/uebung3/persistence/PersistenceException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/hbrs/se1/ws23/uebung3/persistence/PersistenceException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/hbrs/se1/ws23/uebung3/persistence/PersistenceStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/hbrs/se1/ws23/uebung3/persistence/PersistenceStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/hbrs/se1/ws23/uebung3/persistence/PersistenceStrategyStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/hbrs/se1/ws23/uebung3/persistence/PersistenceStrategyStream.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/org/hbrs/se1/ws23/uebung2/test/ContainerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/org/hbrs/se1/ws23/uebung2/test/ContainerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/hbrs/se1/ws23/solutions/uebung3/persistence/PersistenceStrategyStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/hbrs/se1/ws23/solutions/uebung3/persistence/PersistenceStrategyStream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/hbrs/se1/ws23/uebung3/ContainerGeneric.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/hbrs/se1/ws23/uebung3/ContainerGeneric.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/hbrs/se1/ws23/uebung4/prototype/Container.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/hbrs/se1/ws23/uebung4/prototype/Container.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/hbrs/se1/ws23/uebung4/prototype/UserStory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/hbrs/se1/ws23/uebung4/prototype/UserStory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/org/hbrs/se1/ws23/uebung3/test/ContainerGenericTestNew.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/org/hbrs/se1/ws23/uebung3/test/ContainerGenericTestNew.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +103,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;proofread&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.gitlab.GitLabSettingsConfigurable&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -115,7 +113,7 @@
     ]
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.hbrs.se1.ws23.uebung3.view.Client" />
       <module name="codesSE2023" />
@@ -129,8 +127,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.hbrs.se1.ws23.uebung4.Main" />
+      <module name="codesSE2023" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.hbrs.se1.ws23.uebung4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Client" />
       </list>
     </recent_temporary>
@@ -162,7 +174,16 @@
       <workItem from="1698681593904" duration="4000" />
       <workItem from="1699097496482" duration="14827000" />
       <workItem from="1699195106911" duration="1253000" />
-      <workItem from="1699200636166" duration="3744000" />
+      <workItem from="1699200636166" duration="4067000" />
+      <workItem from="1699279656990" duration="2473000" />
+      <workItem from="1699283955459" duration="279000" />
+      <workItem from="1699284627598" duration="34000" />
+      <workItem from="1699290410131" duration="143000" />
+      <workItem from="1699447671508" duration="2763000" />
+      <workItem from="1700051720364" duration="16377000" />
+      <workItem from="1700404258442" duration="6298000" />
+      <workItem from="1700558753166" duration="1710000" />
+      <workItem from="1700560722886" duration="320000" />
     </task>
     <task id="LOCAL-00001" summary="Stand nach übung1 in hbrs">
       <created>1697036852747</created>
@@ -242,7 +263,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698148457363</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="nach uebung 3 zuhause">
+      <option name="closed" value="true" />
+      <created>1699204981528</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1699204981528</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,7 +296,9 @@
     <MESSAGE value="Übung 1 Vorstellung" />
     <MESSAGE value="vor uebung 2" />
     <MESSAGE value="nach uebung 2 zuhause" />
-    <option name="LAST_COMMIT_MESSAGE" value="nach uebung 2 zuhause" />
+    <MESSAGE value="nach uebung 3 zuhause" />
+    <MESSAGE value="nach uebung 4 zuhause" />
+    <option name="LAST_COMMIT_MESSAGE" value="nach uebung 4 zuhause" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
